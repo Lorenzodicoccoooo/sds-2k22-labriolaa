@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+  <title>Sds Labriola</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <h2 class="logo">SDS Labriola <p style="font-size: 70%;"> <!-- Scrivi uno "slogan" per la sds --> </p></h2>
+    </header>
+    <video id="myVideo" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover" loop="">
+    <source src="./src/v.mp4" data-wf-ignore="true" />
+    </video>
+    <div class="overlay"></div>
+    <div class="text">
+      <h2> <!-- Scrivi qui un titolo per la sds --> </h2>
+      <h3> <!-- Puoi dividere il titolo in 2 --> </h3>
+      <p> <!-- Scrivi qui una breve descrzione della SDS --> </p>
+      <a href="#"> Comincia a creare </a>
+    </div>
+  </section>
+  <script  src="./js/script.js"></script>
+  <script src="./js/canvas-video-player.js"></script>
+  <script>
+
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+    if (isIOS) {
+
+      var canvasVideo = new CanvasVideoPlayer({
+        videoSelector: '.video',
+        canvasSelector: '.canvas',
+        timelineSelector: false,
+        autoplay: true,
+        makeLoop: true,
+        pauseOnClick: false,
+        audio: false
+      });
+
+    }else {
+
+      document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+    }
+  </script>
+
+</body>
+</html>

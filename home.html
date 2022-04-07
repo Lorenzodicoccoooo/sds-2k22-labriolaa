@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Settimana dello studente</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    //$("button").click(function(){
+      var table = document.getElementById("ListaCorsi");
+      $.get("/api/v1/corsi/", function(data, status){
+        var rowIndex = 1
+        for (const [key, value] of Object.entries(data)) {
+          if (value.approvato) {
+            var row = table.insertRow(rowIndex);
+
+            var titolo = row.insertCell(0);
+            var descrizione = row.insertCell(1);
+            var istruttore = row.insertCell(2);
+            var data = row.insertCell(3);
+            var orario = row.insertCell(4);
+            var classe = row.insertCell(5);
+            var posti = row.insertCell(6);
+            var prenota = row.insertCell(7);
+
+            titolo.innerHTML = value.titolo;
+            descrizione.innerHTML = value.descrizione;
+            istruttore.innerHTML = value.istruttore;
+            data.innerHTML = value.data;
+            orario.innerHTML = value.oraInizio + '-' + value.oraFine
+            classe.innerHTML = value.classe
+            posti.innerHTML = value.postiLiberi + '/' + value.posti
+            prenota.innerHTML = "<button type='button'>Prenota</button>"
+            //prenota.innerHTML = "<button type='button' onclick="prenota(value.ID)">Prenota</button>"
+            rowIndex = rowIndex + 1
+          }
+        }
+      });
+    //});
+  });
+  </script>
+  <script>
+    function prenota(idCorso) {
+      //Submit POST to modify posti for idCorsoyy
+    }
+  </script>
+</head>
+
+<body>
+
+  <table id="ListaCorsi" align="center">
+    <tr>
+      <th>Titolo</th>
+      <th>Descrizione</th>
+      <th>Istruttore</th>
+      <th>Data</th>
+      <th>Orario</th>
+      <th>Classe</th>
+      <th>Posti</th>
+      <th>Azione</th>
+    </tr>
+  </table>
+
+</body>
+</html>
