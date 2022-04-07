@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settimana dello studente</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
     //$("button").click(function(){
@@ -44,22 +45,126 @@
       //Submit POST to modify posti for idCorsoyy
     }
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    body {
+      background-image: linear-gradient(rgb(0,9,61), rgb(51,0,0));
+      background-repeat: no-repeat;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-left: 31.63194445%;
+      background-color: #fff;
+      width: fit-content;
+      padding: 15px;
+      border-radius: 10px;
+      color: rgb(0, 52, 194);
+      font-size: 3vw;
+    }
+    p {
+      color: #fff;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    table {
+      color: #000;
+      width: 45%;
+      margin-bottom: 20px;
+      height: fit-content;
+      position: relative;
+    }
+    table tr {
+      display: block;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    table tr th {
+      display: block;
+      text-align: start;
+    }
+    table tr th:nth-child(3), table tr th:nth-child(4), table tr th:nth-child(5), table tr th:nth-child(6), table tr th:nth-child(7), table tr th:nth-child(8) {
+      position: relative;
+      left: 61.7283950617%;
+      width: 41%;
+    }
+    table tr th p {
+      margin: 0;
+      color: #000;
+      font-size: 1.25vw;
+      margin-top: 5px;
+    }
+    .textarea {
+      border: 1.5px solid #000;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 10px 0;
+      color: #000;
+      font-size: 1vw;
+    }
+    table tr th:nth-child(1) {
+      font-size: 2vw;
+      width: 100%;
+      line-height: 0;
+    }
+    table tr th:nth-child(2) {
+      width: 60%;
+    }
+    table tr th h3 {
+      margin: 0;
+      font-size: 1.5vw;
+    }
+    table tr th:nth-child(3) {
+      bottom: 225px;
+    }
+    table tr th:nth-child(4) {
+      bottom: 210px;
+    }
+    table tr th:nth-child(5) {
+      bottom: 195px;
+    }
+    table tr th:nth-child(6) {
+      bottom: 180px;
+    }
+    table tr th:nth-child(7) {
+      bottom: 165px;
+    }
+    table tr th:nth-child(8) {
+      bottom: 250px;
+      left: 0%;
+    }
+    table tr th button {
+      background-color: rgb(0, 42, 255);
+      border: 0;
+      border-radius: 10px;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1vw;
+    }
+  </style>
 </head>
-
 <body>
-
+  <h1>Settimana dello studente</h1>
+  <p>Bella a tutti!<br>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <table id="ListaCorsi" align="center">
-    <tr>
-      <th>Titolo</th>
-      <th>Descrizione</th>
-      <th>Istruttore</th>
-      <th>Data</th>
-      <th>Orario</th>
-      <th>Classe</th>
-      <th>Posti</th>
-      <th>Azione</th>
-    </tr>
+    <tbody>
+      <tr>
+        <th><h2>*Titolo corso*</h2></th>
+        <th>
+          <h3>Descrizione corso:</h3>
+          <p class="textarea">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </th>
+        <th><h3>Organizzatore:</h3><p>Luca Monaco</p></th>
+        <th><h3>Data:</h3><p>30/05/2022</p></th>
+        <th><h3>Orario:</h3><p>2<sup>a</sup> ora</p></th>
+        <th><h3>Aula:</h3><p>225</p></th>
+        <th><h3>Posti rimanenti:</h3><p>10</p></th>
+        <th><button>Azione</button></th>
+      </tr>
+    </tbody>
   </table>
-
 </body>
 </html>
